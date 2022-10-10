@@ -3,12 +3,12 @@ package dev.palminschi.features.login
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class LoginReceiveRemote(
+data class LoginReceiveModel(
     val login: String,
     val password: String
 )
 
 @Serializable
-data class LoginResponseRemote(
+data class LoginResponseModel(
     val token: String
 )
