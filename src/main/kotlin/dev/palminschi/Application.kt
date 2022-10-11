@@ -6,6 +6,7 @@ import dev.palminschi.features.registration.configureRegistrationRouting
 import io.ktor.server.engine.*
 import io.ktor.server.cio.*
 import dev.palminschi.plugins.*
+import io.ktor.server.netty.*
 import org.jetbrains.exposed.sql.Database
 
 fun main() {
@@ -15,7 +16,7 @@ fun main() {
         user = "postgres",
         password = "m0236125"
     )
-    embeddedServer(CIO, port = 8888, host = "0.0.0.0") {
+    embeddedServer(Netty, port = System.getenv("PORT").toInt()) {
         InMemoryCache.USER_LIST
         configureRouting()
         configureLoginRouting()

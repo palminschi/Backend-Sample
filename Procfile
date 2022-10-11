@@ -1,0 +1,1 @@
+web: ./build/install/dev.palminschi.backend-sample/bin/dev.palminschi.backend-sample
